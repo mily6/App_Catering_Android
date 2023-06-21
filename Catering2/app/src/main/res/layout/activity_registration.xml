@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity">
+
+    <!-- Logo aplikacji -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/catering" />
+
+    <!-- Pole do wpisana loginu i hasła -->
+    <LinearLayout
+        android:id="@+id/linia2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/podajlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Podaj nazwę konta"
+            android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/reglogin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:hint="Login"
+            android:inputType="text"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/podajmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Podaj email" />
+
+        <EditText
+            android:id="@+id/regmail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:hint="Email"
+            android:inputType="text"
+            android:padding="10dp" />
+        <TextView
+            android:id="@+id/podajhaslo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Podaj hasło do konta" />
+
+        <EditText
+            android:id="@+id/regpassword"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:hint="Hasło"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            tools:ignore="UnknownId"
+            />
+        <TextView
+            android:id="@+id/ponowniehaslo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Powtórz hasło"
+            android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/repeatpassword"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:hint="Powtórz Hasło"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+
+    <!-- Przycisk logowaina i rejestracji -->
+    <LinearLayout
+        android:id="@+id/linia"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#000000"
+            android:text="Zarejestruj"
+            android:textColor="#ffffff"
+            />
+
+        <Button
+            android:id="@+id/loginLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:text="Masz już konto? Zaloguj się!"
+            android:textColor="#0000ff"
+            app:backgroundTint="@color/white"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+</androidx.constraintlayout.widget.ConstraintLayout>
